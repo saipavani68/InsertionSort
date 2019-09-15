@@ -77,7 +77,7 @@ function checkInput(intInput)
   }
   for (var i = 0; i < intInput.length; ++i)
   {
-    if(intInput[i] > 9 || intInput < 0)
+    if(intInput[i] > 9 || intInput[i] < 0 || !Number.isInteger(intInput[i])) // checks that user doesnt enter invalid characters
     {
       document.getElementById("outLab").innerText = "One of the numbers you entered is not a digit.";
       return false;
