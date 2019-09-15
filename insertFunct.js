@@ -1,7 +1,4 @@
 
-//  Please note that console.log are temporary print functions added for debugging.
-//  Once the project is finalized. Please comment out the console statements.
-
 //  Prints out the final report to the specified label.
 function printSteps(report)
 {
@@ -38,7 +35,6 @@ function insertSort(list)
     }
     //  Copy the current state of the array
     report[report.length] = a.slice(0);
-    console.log(a);
   }
   return report;
 }
