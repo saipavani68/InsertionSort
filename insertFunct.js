@@ -90,7 +90,7 @@ function checkInput(intInput)
 function main()
 {
   var strInput = getInput();
-  var intInput = prepareInput(strInput.trim());
+  var intInput = prepareInput(strInput.trim()); // trim() to remove spaces at end
   if(!checkInput(intInput))
   {
     return;
