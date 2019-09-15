@@ -17,3 +17,8 @@ body {
     border-radius: 4px;
     border: 1px solid #c5cbd5;
 }
+
+#outLab {
+    display: block;
+    margin-top: 10px;
+}

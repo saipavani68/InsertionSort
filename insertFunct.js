@@ -3,7 +3,6 @@
 function printSteps(report)
 {
   var label = document.getElementById("outLab");
-  label.innerText = "\n";
   for (var i = 0; i < report.length; ++i)
   {
     label.innerText += report[i].toString() + "\n";
