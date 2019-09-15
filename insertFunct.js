@@ -94,17 +94,13 @@ function checkInput(intInput)
 function main()
 {
   var strInput = getInput();
-  console.log(strInput);
   var intInput = prepareInput(strInput);
-  console.log(intInput);
   if(!checkInput(intInput))
   {
     return;
   }
 
   report = insertSort(intInput)
-
-  console.log(report);
 
   printSteps(report);
 
