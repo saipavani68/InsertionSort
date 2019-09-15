@@ -4,26 +4,20 @@
   <head>
     <meta charset="utf-8">
     <title>Insertion Sort Webpage</title>
-
+    <link rel="stylesheet" href="insertionSort.css">
     <script type="text/javascript" src="insertFunct.js"></script>
-
   </head>
 
 
 
   <body>
-    <section name="input">
-
-      <label>Please type your numbers here with space in between each number (ex: '4 5 6 5 3 55 13'): </label>
+    <div>
+      <h3>Please type your numbers here with space in between each number (ex: '4 5 6 5 3 55 13'): </h3>
       <input type="text" id="inputText">
-      <button type="button" onclick="main()">Submit Numbers</button>
-
-    </section>
-
-    <section name="output">
+      <button type="button" class="submitButton" onclick="main()">Submit</button>
+    </div>
+    <div>
         <label name="outputLabel" id="outLab">The sorted list will show up here.</label>
-    </section>
-
-
+    </div>
   </body>
 </html>

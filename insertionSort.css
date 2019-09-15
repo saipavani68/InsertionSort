@@ -1,0 +1,19 @@
+body {
+    margin: 20px;
+}
+.submitButton {
+    width: 190px;
+    height: 42px;
+    color: white;
+    background: blue;
+    font-size: 20px;
+    border-radius: 6px;
+    margin-left: 20px;
+}
+
+#inputText {
+    width: 222px;
+    height: 35px;
+    border-radius: 4px;
+    border: 1px solid #c5cbd5;
+}
