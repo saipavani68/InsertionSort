@@ -68,11 +68,13 @@ function checkInput(intInput)
   if(intInput.length >8)
   {
     document.getElementById("outLab").innerText = "Please enter less than 8 numbers."
+    document.getElementById("outLab").style.color = "#bb0628";
     return false;
   }
   if(intInput.length < 2)
   {
     document.getElementById("outLab").innerText = "Please enter atleast two numbers."
+    document.getElementById("outLab").style.color = "#bb0628";
     return false;
   }
   for (var i = 0; i < intInput.length; ++i)
@@ -80,6 +82,7 @@ function checkInput(intInput)
     if(intInput[i] > 9 || intInput[i] < 0 || !Number.isInteger(intInput[i])) // checks that user doesnt enter invalid characters
     {
       document.getElementById("outLab").innerText = "One of the numbers you entered is not a digit.";
+      document.getElementById("outLab").style.color = "#bb0628";
       return false;
     }
   }

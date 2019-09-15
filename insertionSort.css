@@ -12,7 +12,7 @@ body {
 }
 
 #inputText {
-    width: 235px;
+    width: 222px;
     height: 35px;
     border-radius: 4px;
     border: 1px solid #c5cbd5;
@@ -21,6 +21,5 @@ body {
 #outLab {
     display: block;
     margin-top: 10px;
-    color: #bb0628;
     width: 20%;
 }
