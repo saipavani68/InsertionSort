@@ -71,19 +71,19 @@ function checkInput(intInput)
 {
   if(intInput.length >8)
   {
-    document.getElementById("outLab").innerText = "You typed too many numbers. Please type in between 2 and 8 numbers."
+    document.getElementById("outLab").innerText = "Please enter less than 8 numbers."
     return false;
   }
   if(intInput.length < 2)
   {
-    document.getElementById("outLab").innerText = "You did not type enough numbers. Please type in between 2 and 8 numbers."
+    document.getElementById("outLab").innerText = "Please enter atleast two numbers."
     return false;
   }
   for (var i = 0; i < intInput.length; ++i)
   {
     if(intInput[i] > 9 || intInput < 0)
     {
-      document.getElementById("outLab").innerText = "One of the numbers you typed is not a digit.";
+      document.getElementById("outLab").innerText = "One of the numbers you entered is not a digit.";
       return false;
     }
   }
