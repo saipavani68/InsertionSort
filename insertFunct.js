@@ -3,7 +3,7 @@
 function printSteps(report)
 {
   var label = document.getElementById("outLab");
-  label.innerText = "\n";
+  label.innerText = "Sorting sequence:\n";
   for (var i = 0; i < report.length; ++i)
   {
     label.innerText += report[i].toString() + "\n";
@@ -83,6 +83,7 @@ function checkInput(intInput)
       return false;
     }
   }
+  document.getElementById("outLab").style.color = "black";
   return true;
 }
 
