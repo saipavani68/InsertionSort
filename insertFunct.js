@@ -5,7 +5,7 @@ function printSteps(report)
   var label = document.getElementById("outLab");
   var sortHeader = document.getElementById("sortingHeader");
   sortHeader.innerText = "Sorting sequence:";
-  label.style.border = '1px solid black'
+  label.style.border = '1px solid black';
   for (var i = 0; i < report.length; ++i)
   {
     label.innerText += report[i].toString() + "\n\n";
@@ -71,6 +71,7 @@ function checkInput(intInput)
   {
     document.getElementById("outLab").innerText = "Please enter less than 8 numbers."
     document.getElementById("outLab").style.color = "#bb0628";
+    
     return false;
   }
   if(intInput.length < 2)
