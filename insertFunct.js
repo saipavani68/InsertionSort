@@ -3,10 +3,12 @@
 function printSteps(report)
 {
   var label = document.getElementById("outLab");
-  label.innerText = "Sorting sequence:\n";
+  var sortHeader = document.getElementById("sortingHeader");
+  sortHeader.innerText = "Sorting sequence:";
+  label.style.border = '1px solid black'
   for (var i = 0; i < report.length; ++i)
   {
-    label.innerText += report[i].toString() + "\n";
+    label.innerText += report[i].toString() + "\n\n";
   }
 
 }
@@ -95,6 +97,9 @@ function main()
 {
   var strInput = getInput();
   var intInput = prepareInput(strInput.trim()); // trim() to remove spaces at end
+  document.getElementById("sortingHeader").innerText = '';
+  document.getElementById("outLab").innerText = '';
+  document.getElementById("outLab").style.border = 'none';
   if(!checkInput(intInput))
   {
     return;
