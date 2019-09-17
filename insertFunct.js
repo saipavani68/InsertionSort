@@ -8,7 +8,7 @@ function printSteps(report)
   label.style.border = '1px solid black';
   for (var i = 0; i < report.length; ++i)
   {
-    label.innerText += report[i].toString() + "\n\n";
+    label.innerText += "  " +report[i].toString() + "\n\n";
   }
 
 }
