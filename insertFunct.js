@@ -5,12 +5,13 @@ function printSteps(report)
   var label = document.getElementById("outLab");
   var sortHeader = document.getElementById("sortingHeader");
   sortHeader.innerText = "Sorting sequence:";
-  label.style.border = '1px solid black';
-  for (var i = 0; i < report.length; ++i)
+  for (var i = 0; i < report.length; i++)
   {
-    label.innerText += "  " +report[i].toString() + "\n\n";
+    const stringArr = report[i].toString().split(',')
+    if (stringArr[i+1])
+    stringArr[i+1]= stringArr[i+1].bold();
+    label.innerHTML += "  " +stringArr + "<br>";
   }
-
 }
 
 //  Actual insert sort algorithm. A report variable is created to store all the neccessary steps.
@@ -22,8 +23,6 @@ function insertSort(list)
   var a = list;
   //  Loop variables
   var j, k;
-
-  //  Copy the first state of the array
   report[report.length] = a.slice(0);
 
   //  Insert sort happens here.
@@ -100,7 +99,6 @@ function main()
   var intInput = prepareInput(strInput.trim()); // trim() to remove spaces at end
   document.getElementById("sortingHeader").innerText = '';
   document.getElementById("outLab").innerText = '';
-  document.getElementById("outLab").style.border = 'none';
   if(!checkInput(intInput))
   {
     return;
