@@ -1,5 +1,6 @@
 
 //  Prints out the final report to the specified label.
+//  Also formats the specified label
 function printSteps(report)
 {
   var label = document.getElementById("outLab");
@@ -70,7 +71,7 @@ function checkInput(intInput)
   {
     document.getElementById("outLab").innerText = "Please enter less than 8 numbers."
     document.getElementById("outLab").style.color = "#bb0628";
-    
+
     return false;
   }
   if(intInput.length < 2)
@@ -92,20 +93,35 @@ function checkInput(intInput)
   return true;
 }
 
+//  Clear the output label of any unneccssary contents/formatting
+function clearOutput()
+{
+  document.getElementById("sortingHeader").innerText = '';
+  document.getElementById("outLab").innerText = '';
+  document.getElementById("outLab").style.border = 'none';
+}
+
 //  Main function, this is what is called when the button is clicked.
 function main()
 {
+  //  Receive the input as a string
   var strInput = getInput();
+  //  Change input from a string to a list of integers
   var intInput = prepareInput(strInput.trim()); // trim() to remove spaces at end
   document.getElementById("sortingHeader").innerText = '';
   document.getElementById("outLab").innerText = '';
+  //  Clears the output space
+  clearOutput();
+  //  Check the input for the bussiness constrainsts
+  //  End execution if a constraint is broken
   if(!checkInput(intInput))
   {
     return;
   }
 
+  //  Send the list to be sorted and receive a report
   report = insertSort(intInput)
-
+  //  Print the report in the output space of the page
   printSteps(report);
 
 }
