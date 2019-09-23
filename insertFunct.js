@@ -9,6 +9,9 @@ function printSteps(report)
   for (var i = 0; i < report.length; i++)
   {
     const stringArr = report[i].toString().split(',')
+    for (j=0; j< stringArr.length; j++) {
+      stringArr[j] = "   " + stringArr[j] + "   "
+    }
     if (stringArr[i+1])
     stringArr[i+1]= stringArr[i+1].bold();
     label.innerHTML += "  " +stringArr + "<br>";
