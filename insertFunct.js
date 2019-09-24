@@ -88,7 +88,7 @@ function checkInput(intInput)
     if(intInput[i] > 9 || intInput[i] < 0 || !Number.isInteger(intInput[i])) // checks that user doesnt enter invalid characters
     {
       if(Math.sign(intInput[i]) === -1) {
-        document.getElementById("outLab").innerText = "Please don't enter negative numbers";
+        document.getElementById("outLab").innerText = "Please don't enter negative numbers.";
       } else {
         document.getElementById("outLab").innerText = "One of the numbers you entered is not a digit.";
       }
