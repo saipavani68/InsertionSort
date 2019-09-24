@@ -101,7 +101,7 @@ function clearOutput()
 {
   document.getElementById("sortingHeader").innerText = '';
   document.getElementById("outLab").innerText = '';
-  document.getElementById("outLab").style.border = 'none';
+  document.getElementById("inputText").value= '';
 }
 
 //  Main function, this is what is called when the button is clicked.
@@ -113,8 +113,6 @@ function main()
   var intInput = prepareInput(strInput.trim()); // trim() to remove spaces at end
   document.getElementById("sortingHeader").innerText = '';
   document.getElementById("outLab").innerText = '';
-  //  Clears the output space
-  clearOutput();
   //  Check the input for the bussiness constrainsts
   //  End execution if a constraint is broken
   if(!checkInput(intInput))
