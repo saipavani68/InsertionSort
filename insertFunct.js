@@ -59,7 +59,13 @@ function prepareInput(strInput)
 
   for (var i =0; i < arrStr.length; ++i)
   {
-      arrInt[i] = parseInt(arrStr[i], 10);
+    if (isNaN(arrStr[i])) {
+      document.getElementById("outLab").innerText = "Don't enter fraction values.";
+      document.getElementById("outLab").style.color = "#bb0628";
+      arrStr = [];
+    } else {
+        arrInt[i] = parseInt(arrStr[i], 10);
+      }
   }
   return arrInt;
 }
@@ -123,7 +129,8 @@ function main()
   document.getElementById("outLab").innerText = '';
   //  Check the input for the bussiness constraints
   //  End execution if a constraint is broken
-  if(!checkInput(intInput))
+
+  if(!checkInput(intInput) || intInput.length <= 0)
   {
     return;
   }
