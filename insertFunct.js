@@ -117,7 +117,7 @@ function main()
   var intInput = prepareInput(strInput.trim()); // trim() to remove spaces at end
   document.getElementById("sortingHeader").innerText = '';
   document.getElementById("outLab").innerText = '';
-  //  Check the input for the bussiness constrainsts
+  //  Check the input for the bussiness constraints
   //  End execution if a constraint is broken
   if(!checkInput(intInput))
   {
