@@ -59,13 +59,7 @@ function prepareInput(strInput)
 
   for (var i =0; i < arrStr.length; ++i)
   {
-    if (isNaN(arrStr[i])) {
-      document.getElementById("outLab").innerText = "Don't enter fraction values.";
-      document.getElementById("outLab").style.color = "#bb0628";
-      arrStr = [];
-    } else {
-        arrInt[i] = parseInt(arrStr[i], 10);
-      }
+    arrInt[i] = parseInt(arrStr[i], 10);
   }
   return arrInt;
 }
@@ -76,47 +70,28 @@ function prepareInput(strInput)
 //  Req: The integers of the array should be in the range of 0 and 9
 function checkInput(intInput)
 {
-  if(intInput.length >8)
-  {
-    document.getElementById("outLab").innerText = "Please enter less than 8 numbers."
-    document.getElementById("outLab").style.color = "#bb0628";
+  //  Change color for the error messages (Red color)
+  document.getElementById("outLab").style.color = "#bb0628";
 
-    return false;
-  }
-  if(intInput.length < 2)
+  //  Check the size of the list
+  if(!checkListSize(intInput.length))
   {
-    document.getElementById("outLab").innerText = "Please enter atleast two numbers."
-    document.getElementById("outLab").style.color = "#bb0628";
     return false;
   }
+  //  Check the contents of the list on by one
+  //  See helperFunct.js for function
   for (var i = 0; i < intInput.length; ++i)
   {
-    if(intInput[i] > 9 || intInput[i] < 0 || !Number.isInteger(intInput[i])) // checks that user doesnt enter invalid characters
+    if(!checkNumber(intInput[i]))
     {
-      if(Math.sign(intInput[i]) === -1) {
-        document.getElementById("outLab").innerText = "Please don't enter negative numbers.";
-      } else {
-         if (isNaN(intInput[i])) {
-            document.getElementById("outLab").innerText = "Please don't enter alphabets.";
-        } else {
-            document.getElementById("outLab").innerText = "One of the numbers you entered is not a digit.";
-        }
-      }
-      document.getElementById("outLab").style.color = "#bb0628";
       return false;
     }
   }
+  //  Change color if everything is checked and successful (Black color)
   document.getElementById("outLab").style.color = "black";
   return true;
 }
 
-//  Clear the output label of any unneccssary contents/formatting
-function clearOutput()
-{
-  document.getElementById("sortingHeader").innerText = '';
-  document.getElementById("outLab").innerText = '';
-  document.getElementById("inputText").value= '';
-}
 
 //  Main function, this is what is called when the button is clicked.
 function main()
@@ -125,8 +100,9 @@ function main()
   var strInput = getInput();
   //  Change input from a string to a list of integers
   var intInput = prepareInput(strInput.trim()); // trim() to remove spaces at end
-  document.getElementById("sortingHeader").innerText = '';
-  document.getElementById("outLab").innerText = '';
+  //  Clears the output output
+  //  See helperFunct.js for implementation
+  clearOutput();
   //  Check the input for the bussiness constraints
   //  End execution if a constraint is broken
 
@@ -139,5 +115,4 @@ function main()
   report = insertSort(intInput)
   //  Print the report in the output space of the page
   printSteps(report);
-
 }
