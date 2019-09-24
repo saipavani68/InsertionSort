@@ -90,7 +90,11 @@ function checkInput(intInput)
       if(Math.sign(intInput[i]) === -1) {
         document.getElementById("outLab").innerText = "Please don't enter negative numbers.";
       } else {
-        document.getElementById("outLab").innerText = "One of the numbers you entered is not a digit.";
+         if (isNaN(intInput[i])) {
+            document.getElementById("outLab").innerText = "Please don't enter alphabets.";
+        } else {
+            document.getElementById("outLab").innerText = "One of the numbers you entered is not a digit.";
+        }
       }
       document.getElementById("outLab").style.color = "#bb0628";
       return false;
