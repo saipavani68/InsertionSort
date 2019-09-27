@@ -102,7 +102,6 @@ function main()
   var intInput = prepareInput(strInput.trim()); // trim() to remove spaces at end
   //  Clears the output output
   //  See helperFunct.js for implementation
-  clearOutput();
   //  Check the input for the bussiness constraints
   //  End execution if a constraint is broken
 

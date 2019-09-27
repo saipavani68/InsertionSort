@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Insertion Sort</title>
+    <link rel="stylesheet" href="insertionSort.css">
+    <script type="text/javascript" src="insertFunct.js"></script>
+    <script type="text/javascript" src="helperFunct.js"></script>
+    </head>
+    <body>
+        <h1 style = "background-color: orangered">What is INSERTION Sort?</h1>
+        <p style = "font-size:150%">This is an in-place comparison-based sorting algorithm. Here, a sub-list is maintained which is always sorted. For example, the lower part of an array is maintained to be sorted. An element which is to be 'insert'ed in this sorted sub-list, has to find its appropriate place and then it has to be inserted there. Hence the name, insertion sort.</p>
+        <br><p style = "font-size:150%">The array is searched sequentially and unsorted items are moved and inserted into the sorted sub-list (in the same array).</p>
+        <br>
+        <h1 style = "background-color: orangered">Algorithm</h1>
+        <p style = "font-size:150%">Step 1 − If it is the first element, it is already sorted. return 1;<br>
+        Step 2 − Pick next element<br>Step 3 − Compare with all elements in the sorted sub-list<br>
+        Step 4 − Shift all the elements in the sorted sub-list that is greater than the value to be sorted<br>
+        Step 5 − Insert the value<br>
+        Step 6 − Repeat until list is sorted<br>
+        </p>   
+        <h1 style = "background-color: orangered">Pseudocode</h1>
+        <p style = "font-size:150%">procedure insertionSort( A : array of items )<br>
+            int holePosition<br>
+            int valueToInsert<br>
+             
+            for i = 1 to length(A) inclusive do:<br>
+             
+               /* select value to be inserted */<br>
+               valueToInsert = A[i]<br>
+               holePosition = i<br>
+               
+               /*locate hole position for the element to be inserted */<br>
+                 
+               while holePosition > 0 and A[holePosition-1] > valueToInsert do:<br>
+                  A[holePosition] = A[holePosition-1]<br>
+                  holePosition = holePosition -1<br>
+               end while<br>
+                 
+               /* insert the number at hole position */<br>
+               A[holePosition] = valueToInsert<br>
+               
+            end for<br>
+             
+         end procedure</p>
+         <h1 style = "background-color: orangered"> Time Complexity</h1>
+         <p style = "font-size:150%"> average and worst case time complexity for insertion sort = Ο(n2)
+              <br>where n is the number of items.</p>
+              <p>For more information on how Insert Sort works please click here: <a href="https://en.wikipedia.org/wiki/Insertion_sort">Insert Sort help page</a></p>
+
+        <button type="button" class="sortButton" onclick="window.location.href='index.html'">Go back</button>
+    </body>
+</html>
