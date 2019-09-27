@@ -52,7 +52,7 @@ function checkNumber(num)
   //  Non-digit number checker
   if (num > 9)
   {
-    document.getElementById("outLab").innerText = "One of the numbers you entered is not a digit.";
+    document.getElementById("outLab").innerText = "One of the numbers you entered is more than 9.";
     return false;
   }
   return true;
