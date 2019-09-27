@@ -7,11 +7,15 @@
 
 
 //  Clear the output label of any unneccssary contents/formatting
+function clearInput()
+{
+  document.getElementById("inputText").value= '';
+}
+
 function clearOutput()
 {
   document.getElementById("sortingHeader").innerText = '';
   document.getElementById("outLab").innerText = '';
-  document.getElementById("inputText").value= '';
 }
 
 function checkListSize(size)

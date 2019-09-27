@@ -104,6 +104,7 @@ function main()
   //  See helperFunct.js for implementation
   //  Check the input for the bussiness constraints
   //  End execution if a constraint is broken
+clearOutput();
 
   if(!checkInput(intInput) || intInput.length <= 0)
   {
